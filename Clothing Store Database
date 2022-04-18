@@ -1,0 +1,19 @@
+CREATE TABLE Clothes (id integer primary key, name TEXT, price INTEGER, color TEXT, size TEXT);
+
+insert into clothes values (1, "Shirt", 10, "Red", "Small");
+insert into clothes values (2, "Shirt", 10, "Red", "Medium");
+insert into clothes values (3, "Shirt", 10, "Red", "Large");
+insert into clothes values (4, "Shirt", 10, "Red", "X-Large");
+insert into clothes values (5, "Pants", 20, "Black", "Small");
+insert into clothes values (6, "Pants", 20, "Black", "Medium");
+insert into clothes values (7, "Pants",20, "Black", "Large");
+insert into clothes values (8, "Pants", 20, "Black", "X-Large");
+insert into clothes values (9, "Hoodie", 15, "Grey", "Small");
+insert into clothes values (10, "Hoodie", 15, "Grey", "Medium");
+insert into clothes values (11, "Hoodie", 15, "Grey", "Large");
+insert into clothes values (12,"Hoodie", 15, "Grey", "X-Large");
+insert into clothes values (13, "Socks", 3, "Black", "OS");
+insert into clothes values (14, "Socks", 3, "White", "OS");
+insert into clothes values (15, "Socks", 3, "Grey", "OS");
+
+select * from clothes order by price;
