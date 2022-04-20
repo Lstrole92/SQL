@@ -1,0 +1,69 @@
+/* Create table about the people and what they do here */
+CREATE TABLE famouspeople 
+(id INTEGER PRIMARY KEY autoincrement, 
+fullname TEXT);
+
+INSERT INTO famouspeople (fullname)
+VALUES ("britney spears");
+INSERT INTO famouspeople (fullname)
+VALUES ("christina aguilera");
+INSERT INTO famouspeople (fullname)
+VALUES ("ariana grande");
+INSERT INTO famouspeople (fullname)
+VALUES ("miley cyrus");
+INSERT INTO famouspeople (fullname)
+VALUES ("selena gomez");
+
+CREATE TABLE ages
+(id INTEGER PRIMARY KEY autoincrement,
+fullname TEXT,
+age INTEGER);
+
+INSERT INTO ages (fullname, age)
+VALUES ("britney spears", 40);
+INSERT INTO ages (fullname, age)
+VALUES ("christina aguilera", 41);
+INSERT INTO ages (fullname, age)
+VALUES ("ariana grande", 28);
+INSERT INTO ages (fullname, age)
+VALUES ("miley cyrus", 29);
+INSERT INTO ages (fullname, age)
+VALUES ("selena gomez", 29);
+
+CREATE TABLE occupation
+(id INTEGER PRIMARY KEY,
+fullname TEXT,
+o1 TEXT,
+o2 TEXT,
+o3 TEXT,
+o4 TEXT);
+
+INSERT INTO occupation
+VALUES (1, "britney spears", "singer", "songwriter", "actress", "dancer");
+INSERT INTO occupation 
+VALUES (2, "christina aguilera", "singer", "songwriter", "actress", "NULL");
+INSERT INTO occupation 
+VALUES (3, "ariana grande", "singer", "songwriter", "actress", "NULL");
+INSERT INTO occupation 
+VALUES (4, "miley cyrus", "singer", "songwriter", "actress", "producer");
+INSERT INTO occupation
+VALUES (5, "selena gomez", "singer", "songwriter", "actress", "producer");
+
+SELECT ages.fullname, ages.age, o1, o2, o3, o4
+FROM ages
+JOIN occupation
+ON ages.id = occupation.id;
+
+SELECT ages.fullname, ages.age, o1, o2, o3, o4
+FROM ages
+JOIN occupation
+ON ages.id = occupation.id
+WHERE age >30;
+
+SELECT ages.fullname, ages.age, o1, o2, o3, o4
+FROM ages
+JOIN occupation
+ON ages.id = occupation.id
+WHERE age < 30;
+
+
