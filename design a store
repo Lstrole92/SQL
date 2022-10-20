@@ -1,0 +1,27 @@
+CREATE table clothes (id integer primary key, type text, size text, color text, cost integer);
+
+INSERT into clothes VALUES
+(1, "tshirt", "small", "black", 10),
+(2, "tshirt", "medium", "black", 10),
+(3, "tshirt", "large", "black", 10),
+(4, "tshirt", "xlarge", "black", 10),
+(5, "tshirt", "xxlarge", "black", 10),
+(6, "leggings", "xsmall", "black", 12),
+(7, "leggings", "small", "black", 12),
+(8, "leggings", "medium", "black", 12),
+(9, "leggings", "large", "black", 12),
+(10, "leggings", "xlarge", "black", 12),
+(11, "sweater", "small", "green", 15),
+(12, "sweater", "medium", "green", 15),
+(13, "sweater", "large", "green", 15),
+(14, "sweater", "xlarge", "green", 15),
+(15, "sweater", "xxlarge", "green", 15);
+SELECT * FROM clothes
+ORDER BY cost asc;
+
+SELECT * FROM clothes 
+WHERE color = "green";
+
+SELECT * FROM clothes
+WHERE color = "black"
+ORDER BY cost desc;
